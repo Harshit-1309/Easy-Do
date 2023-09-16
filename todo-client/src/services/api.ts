@@ -1,5 +1,7 @@
 import { IUser } from "@/types"
+import axios from "axios"
 import axiosInstance, { TODO_TOKEN_NAME, saveToken } from "./config"
+// import { axiosInstance } from '@/services/config';
 
 type RegisterUserTypes = IUser
 
@@ -15,6 +17,7 @@ export const registerUser = async ({
       name,
     })
     return response.data.user
+    
   } catch (error) {
     console.log("error in registerUser", error)
     throw error

@@ -59,8 +59,7 @@ const TaskActions = ({ categoryId }: TaskActionsProps) => {
   const selectedCategory = categories?.find(
     (_category) => _category._id === newTask.categoryId
   )
-
-  console.log(`selectedCategory`, JSON.stringify(selectedCategory, null, 2))
+  console.log(JSON.stringify(selectedCategory, null, 2))
 
   const onCreateTask = async () => {
     try {
